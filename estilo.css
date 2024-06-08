@@ -8,10 +8,7 @@
 form {
     background-color: #00ffff;
     justify-content: center;
-    
-    
-}
-.button {
+    .button {
   position: relative;
   width: 120px;
   height: 40px;
@@ -66,6 +63,10 @@ form {
   scale: 0.7;
 }
 
+
+    
+    
+}
 
 
 body {
