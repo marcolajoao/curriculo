@@ -51,6 +51,45 @@ Sinta-se à vontade para me contatar pelo e-mail jp.joaopedromarcola@hotmail.com
                 <strong>Telefone: (43) 99998-0302<strong>
                 <strong>E-mail: jp.joaopedromarcola@hotmail.com.</p><strong>
         </section>
+        <!-- Nova div com o nome "teste_perfillinkedin" -->
+        <div id="teste_perfillinkedin">
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Perfil do LinkedIn</title>
+                <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+            </head>
+            <body>
+                <div class="badge-base LI-profile-badge" 
+                     data-locale="pt_BR" 
+                     data-size="medium" 
+                     data-theme="dark" 
+                     data-type="VERTICAL" 
+                     data-vanity="joão-pedro-marçola" 
+                     data-version="v1">
+                    <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/jo%C3%A3o-pedro-mar%C3%A7ola?trk=profile-badge">João Pedro Marçola</a>
+                </div>
+
+                <script>
+                    // Função para extrair dados do perfil do LinkedIn
+                    function extrairDadosDoPerfil() {
+                        // Obter o elemento do badge
+                        var badgeElement = document.querySelector('.badge-base');
+                        
+                        // Extrair o nome de usuário
+                        var vanity = badgeElement.getAttribute('data-vanity');
+                        console.log('Nome de usuário: ', vanity);
+                        
+                        // Extrair a URL do perfil
+                        var perfilURL = badgeElement.querySelector('.badge-base__link').getAttribute('href');
+                        console.log('URL do perfil: ', perfilURL);
+                    }
+
+                    // Chamar a função para extrair dados do perfil ao carregar a página
+                    window.onload = extrairDadosDoPerfil;
+                </script>
     </main>
     <footer>
         <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
